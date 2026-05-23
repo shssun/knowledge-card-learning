@@ -1,0 +1,22 @@
+{
+  "totalTerms": 25,
+  "domains": {
+    "ai-basics": { "name": "AI基础", "description": "人工智能与机器学习核心术语", "termCount": 10 },
+    "economics": { "name": "经济学基础", "description": "微观与宏观经济学核心概念", "termCount": 8 },
+    "psychology": { "name": "认知心理学", "description": "人类认知偏差与决策心理学", "termCount": 7 }
+  },
+  "domainTerms": {
+    "ai-basics": [
+      "机器学习", "神经网络", "大语言模型", "Prompt工程", "RAG",
+      "Token", "Embedding", "幻觉", "Fine-tuning", "Agent"
+    ],
+    "economics": [
+      "供需关系", "边际效应", "机会成本", "比较优势",
+      "外部性", "通货膨胀", "博弈均衡", "信息不对称"
+    ],
+    "psychology": [
+      "认知偏差", "锚定效应", "损失厌恶", "确认偏误",
+      "从众效应", "沉没成本谬误", "框架效应"
+    ]
+  }
+}

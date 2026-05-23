@@ -1,0 +1,49 @@
+sequenceDiagram
+    participant User as 用户
+    participant Browser as 浏览器
+    participant App as App.tsx
+    participant Layout as AppLayout
+    participant Hook as useIsMobile
+    participant SideNav as Sidebar
+    participant DTBar as TopBar(Desktop)
+    participant MTBar as MobileTopBar
+    participant BNav as MobileBottomNav
+    participant Router as React Router
+
+    Browser->>App: 首次加载
+    App->>Layout: 渲染 AppLayout
+
+    Layout->>Hook: useIsMobile()
+    Hook-->>Layout: isMobile = true/false
+
+    alt isMobile = false (桌面端)
+        Layout->>SideNav: 渲染 Sidebar
+        Layout->>DTBar: 渲染 TopBar(Desktop)
+        Layout->>Layout: 渲染 Footer
+    else isMobile = true (移动端)
+        Layout->>MTBar: 渲染 MobileTopBar
+        Layout->>BNav: 渲染 MobileBottomNav
+        Layout->>Layout: 不渲染 Footer + Sidebar
+    end
+
+    Note over User,Router: 用户点击底部Tab导航
+    User->>BNav: 点击"研习"Tab
+    BNav->>Router: navigate('/study')
+    Router->>Layout: 路由变化，重新渲染
+    Layout->>MTBar: 更新页面标题为"研习"
+
+    Note over User,Router: 窗口尺寸变化
+    Browser->>Hook: 视口变化触发 useMediaQuery
+    Hook-->>Layout: isMobile 值更新
+    Layout->>Layout: 重新选择导航方案
+
+    Note over User,Router: 移动端页面访问流程
+    User->>BNav: 点击"研习"
+    BNav->>Layout: 路由到 /study
+    MTBar->>MTBar: 显示标题"研习"
+
+    User->>MTBar: 点击头像
+    MTBar->>Router: navigate('/settings')
+
+    User->>MTBar: 点击暗色模式图标
+    MTBar->>MTBar: toggleDarkMode()

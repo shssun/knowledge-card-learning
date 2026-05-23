@@ -1,0 +1,71 @@
+classDiagram
+    class useIsMobile {
+        +useIsMobile() boolean
+    }
+
+    class MobileBottomNav {
+        -location: Location
+        -navigate: NavigateFunction
+        -menuItems: NavItem[]
+        +render() JSX.Element
+    }
+
+    class MobileTopBar {
+        -location: Location
+        -isDarkMode: boolean
+        -toggleDarkMode() void
+        -getPageTitle(pathname: string) string
+        +render() JSX.Element
+    }
+
+    class AppLayout {
+        -isMobile: boolean
+        +render() JSX.Element
+    }
+
+    class NavItem {
+        +path: string
+        +label: string
+        +icon: ReactElement
+    }
+
+    class UIStore {
+        +isDarkMode: boolean
+        +sidebarOpen: boolean
+        +currentView: string
+        +hasSeenOnboarding: boolean
+        +notification: object
+        +toggleDarkMode() void
+        +setSidebarOpen(open: boolean) void
+    }
+
+    class Sidebar {
+        -location: Location
+        -navigate: NavigateFunction
+        -menuItems: NavItem[]
+        -bottomMenuItems: NavItem[]
+        +render() JSX.Element
+    }
+
+    class TopBar {
+        -isDarkMode: boolean
+        -toggleDarkMode() void
+        -anchorEl: HTMLElement|null
+        +render() JSX.Element
+    }
+
+    class Footer {
+        +render() JSX.Element
+    }
+
+    AppLayout --> useIsMobile : uses
+    AppLayout --> Sidebar : renders when !isMobile
+    AppLayout --> TopBar : renders when !isMobile
+    AppLayout --> MobileTopBar : renders when isMobile
+    AppLayout --> MobileBottomNav : renders when isMobile
+    AppLayout --> Footer : renders when !isMobile
+
+    MobileBottomNav --> NavItem : uses
+    MobileTopBar --> UIStore : reads isDarkMode, toggleDarkMode
+    Sidebar --> NavItem : uses
+    TopBar --> UIStore : reads isDarkMode, toggleDarkMode

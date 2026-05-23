@@ -1,0 +1,91 @@
+{
+  "name": "经典思维模型归一拆解",
+  "description": "将主流思维模型反向拆解为底层元概念组合，揭示其本质、优势和边界",
+  "totalModels": 12,
+  "models": [
+    {
+      "key": "compounding",
+      "name": "复利思维",
+      "category": "成长与财富",
+      "origin": "查理·芒格 / 巴菲特",
+      "elevator": "持续积累的微小优势，在时间作用下产生指数级回报"
+    },
+    {
+      "key": "opportunity-cost",
+      "name": "机会成本",
+      "category": "决策与经济学",
+      "origin": "经济学基础概念",
+      "elevator": "每一个选择都意味着放弃其他所有可能中的最大价值"
+    },
+    {
+      "key": "second-curve",
+      "name": "第二曲线创新",
+      "category": "商业与创新",
+      "origin": "查尔斯·汉迪",
+      "elevator": "在第一曲线到达顶峰前，主动开启新的增长曲线"
+    },
+    {
+      "key": "inversion",
+      "name": "逆向思维",
+      "category": "决策与分析",
+      "origin": "查理·芒格 / 卡尔·雅可比",
+      "elevator": "正面难解时反过来想——不是如何成功，而是如何避免失败"
+    },
+    {
+      "key": "paretos-law",
+      "name": "二八法则",
+      "category": "效率与分配",
+      "origin": "维尔弗雷多·帕累托",
+      "elevator": "80% 的结果来自 20% 的原因，聚焦关键少数"
+    },
+    {
+      "key": "first-principles",
+      "name": "第一性原理",
+      "category": "思维方法",
+      "origin": "亚里士多德 / 埃隆·马斯克",
+      "elevator": "回到最底层的基本事实，从那里开始重新推导，不被既有结论束缚"
+    },
+    {
+      "key": "systems-thinking",
+      "name": "系统思维",
+      "category": "思维方法",
+      "origin": "彼得·圣吉 / 德内拉·梅多斯",
+      "elevator": "看整体而非局部，看关系而非孤立元素，看动态而非静态"
+    },
+    {
+      "key": "game-theory",
+      "name": "博弈论",
+      "category": "决策与策略",
+      "origin": "冯·诺依曼 / 约翰·纳什",
+      "elevator": "在多方互动中，你的最优策略取决于他人的选择"
+    },
+    {
+      "key": "circle-of-competence",
+      "name": "能力圈",
+      "category": "认知与自省",
+      "origin": "查理·芒格 / 巴菲特",
+      "elevator": "知道自己知道什么，更要知道自己不知道什么，只在能力圈内行动"
+    },
+    {
+      "key": "sunk-cost",
+      "name": "沉没成本谬误",
+      "category": "认知偏误",
+      "origin": "行为经济学",
+      "elevator": "已经付出且不可收回的成本，不应影响未来的决策"
+    },
+    {
+      "key": "feedback-loop",
+      "name": "反馈循环",
+      "category": "学习与进化",
+      "origin": "控制论 / 系统论",
+      "elevator": "输出反馈回输入，形成自我强化或自我修正的循环机制"
+    },
+    {
+      "key": "antifragile",
+      "name": "反脆弱",
+      "category": "风险与韧性",
+      "origin": "纳西姆·塔勒布",
+      "elevator": "不是抵抗冲击，而是从冲击和混乱中获益，越挫越强"
+    }
+  ]
+}
